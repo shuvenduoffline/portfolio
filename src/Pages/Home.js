@@ -10,15 +10,20 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
     root: {
-         minHeight : '100vh',
+       
+        height : '100vh',
         backgroundColor: '#000000'
     },
     logoImage : {
-        width: 228,
+        width: 220,
         height: 84,
         flex: 2,
+        display: 'flex',
+        alignItems: 'flex-start',
+        paddingRight: 0
     },
     navigations : {
+       
         display: 'flex',
         flexDirection: 'row',
         paddingLeft: 80,
@@ -27,9 +32,11 @@ const useStyles = makeStyles({
         flex: 6
     },
     navItem : {
+       
         fontFamily: 'Poppins',
         color: 'white',
-        fontSize: 20
+        fontSize: 20,
+        cursor: 'pointer'
     },
     menus : {
         display: 'flex',
@@ -38,6 +45,7 @@ const useStyles = makeStyles({
         flex: 3
     },
     hireme : {
+       
         display: 'flex',
         flex: 1,
         justifyContent: 'center',
@@ -55,32 +63,35 @@ const useStyles = makeStyles({
         marginTop: -20,
         paddingTop: 20
     },
-    body:{
-        
+    bodyDIV:{
+       
         display: 'flex',
         flexDirection: 'row',
-        flex: 2
+        flex: 2,
+        maxHeight: '70%'
     },
     myname :{
-        
+       
         flex:1,
         display: 'flex',
         justifyContent: 'flex-start',
         flexDirection: 'column',
-        marginLeft: 70,
-        marginRight: -70,
+        marginLeft: 80,
+        marginRight: -100,
         marginTop: 80,
-        marginBottom: 80,
+        marginBottom: 80
     },
     homeImage : {
-        
+       
        flex: 1
     },
     imageCompter : {
+       
         maxWidth: 900,
         maxHeight: 500
     },
     myNameWr: {
+       
         textAlign: 'left',
         fontFamily: 'Poppins',
         color: 'white',
@@ -89,12 +100,12 @@ const useStyles = makeStyles({
         margin: 0
     },
     hisvg : {
-           
+       
         maxHeight: 60,
         maxWidth: 140
     },
     intro : {
-        
+       
         fontFamily: 'Poppins',
         color: 'white',
         fontWeight: 400,
@@ -103,20 +114,36 @@ const useStyles = makeStyles({
         textAlign: 'left'
     },
     homeButtons : {
+       
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
             maxWidth: 250
     },
     downloadCV :{
+       
         minWidth: 128,
         minHeight: 47,
         background:'#FF4900',
     },
     mywork : {
+       
         fontFamily: 'Poppins',
         color: 'white',
         fontWeight: 600
+    },
+    downLogo : {
+       
+        maxHeight: 80,
+        marginTop: 10
+    },
+    downLogoSVG : {
+       
+        maxHeight : 60,
+        maxWidth: 50
+    },
+    mLogoImg : {
+       
     }
   });
 
@@ -125,9 +152,12 @@ const Home = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="home">
             <div className={classes.navigations}>
-                <img src={Logo} className={classes.logoImage}/>
+                <div  className={classes.logoImage}>
+                    <img src={Logo} className={classes.mLogoImg}/>
+                </div>
+               
 
                 <div className={classes.menus}>
                     <div className={classes.highLighted}>
@@ -145,7 +175,9 @@ const Home = () => {
                     </Button>
                 </div>
             </div>
-            <div className={classes.body}>
+
+            <div className={classes.bodyDIV}>
+
                 <div className={classes.myname}>
                     <img src={HiSVG} className={classes.hisvg}></img>
                     <h1 className={classes.myNameWr}>Shuvendu Dhal</h1>
@@ -161,10 +193,15 @@ const Home = () => {
                         </Button>
                     </div>
                 </div>
+
                 <div className={classes.homeImage}>
                     <img className={classes.imageCompter} src={ComputerSVG}/>
                 </div>
             </div>
+
+            <div className={classes.downLogo}>
+                    <img src={DownSVG} className={classes.downLogoSVG}/>
+                </div>
         </div>
     );
 }
