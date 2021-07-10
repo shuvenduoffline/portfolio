@@ -5,6 +5,7 @@ import ComputerSVG from '../assets/computer.svg';
 import DownSVG from '../assets/downarrow.svg';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Typical from 'react-typical'
 
 
 
@@ -100,7 +101,6 @@ const useStyles = makeStyles({
         margin: 0
     },
     hisvg : {
-       
         maxHeight: 60,
         maxWidth: 140
     },
@@ -110,8 +110,10 @@ const useStyles = makeStyles({
         color: 'white',
         fontWeight: 400,
         fontSize: 20,
-        marginBottom: 40,
-        textAlign: 'left'
+        marginBottom: 30,
+        textAlign: 'left',
+        marginTop: 5,
+        height: 40
     },
     homeButtons : {
        
@@ -133,7 +135,7 @@ const useStyles = makeStyles({
         fontWeight: 600
     },
     downLogo : {
-       
+        cursor: 'pointer',
         maxHeight: 80,
         marginTop: 10
     },
@@ -181,9 +183,17 @@ const Home = () => {
                 <div className={classes.myname}>
                     <img src={HiSVG} className={classes.hisvg}></img>
                     <h1 className={classes.myNameWr}>Shuvendu Dhal</h1>
-                    <h3 className={classes.intro}>
+                    {/* <h3 className={classes.intro}>
                         A Professional Java Developer and UI/UX Designer!
-                    </h3>
+                    </h3> */}
+                    {/* <Typical
+                        className={classes.intro}
+                        steps={['A Professional Java Developer!', 2000, 'A Professional ReactJS Developer!', 2000, `I build new projects just to tickle my brain and love teaching others how they're made.`,3000,
+                        `While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.`
+                        ,3000]}
+                        loop={Infinity}
+                        wrapper="p"
+                    /> */}
                     <div className={classes.homeButtons}>
                         <Button variant="contained" color="primary"   className={classes.downloadCV}>
                             Download CV
