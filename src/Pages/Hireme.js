@@ -51,7 +51,7 @@ const Hireme = () => {
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="hireme">
       <div className={classes.midBox}>
         <Fade in={fedIn}>
           <h3 className={classes.ideaQ}>

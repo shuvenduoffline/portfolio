@@ -9,8 +9,11 @@ import Typical from "react-typical";
 
 const useStyles = makeStyles({
   root: {
-    height: "100vh",
+    width: "100%",
+    height: "100%",
     backgroundColor: "#000000",
+    overflow: "hidden",
+    border: "1px solid red",
   },
   logoImage: {
     width: 220,
@@ -19,6 +22,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "flex-start",
     paddingRight: 0,
+    border: "1px solid red",
   },
   navigations: {
     display: "flex",
@@ -27,6 +31,8 @@ const useStyles = makeStyles({
     paddingRight: 80,
     paddingTop: 20,
     flex: 6,
+    border: "1px solid red",
+    overflow: "hidden",
   },
   navItem: {
     fontFamily: "Poppins",
@@ -37,23 +43,28 @@ const useStyles = makeStyles({
     "&:hover": {
       "letter-spacing": 0.2,
     },
+    border: "1px solid red",
   },
   menus: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
     flex: 3,
+    border: "1px solid red",
+    overflow: "hidden",
   },
   hireme: {
     display: "flex",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    border: "1px solid red",
   },
   hiremeButton: {
     minWidth: 128,
     minHeight: 47,
     background: "#FF4900",
+    border: "1px solid red",
   },
   highLighted: {
     background: "#FF4900",
@@ -61,12 +72,16 @@ const useStyles = makeStyles({
     paddingRight: 20,
     marginTop: -20,
     paddingTop: 20,
+    border: "1px solid red",
   },
   bodyDIV: {
     display: "flex",
     flexDirection: "row",
     flex: 2,
     maxHeight: "70%",
+    border: "1px solid red",
+    width: "95%",
+    overflow: "hidden",
   },
   myname: {
     flex: 1,
@@ -77,13 +92,18 @@ const useStyles = makeStyles({
     marginRight: -100,
     marginTop: 80,
     marginBottom: 80,
+    border: "1px solid red",
   },
   homeImage: {
     flex: 1,
+    border: "1px solid red",
+    overflow: "hidden",
   },
   imageCompter: {
-    maxWidth: 800,
+    maxWidth: 700,
     maxHeight: 500,
+    border: "1px solid red",
+    overflow: "hidden",
   },
   myNameWr: {
     textAlign: "left",
@@ -93,10 +113,14 @@ const useStyles = makeStyles({
     fontSize: 80,
     margin: 0,
     cursor: "default",
+    border: "1px solid red",
+    overflow: "hidden",
   },
   hisvg: {
     maxHeight: 60,
     maxWidth: 140,
+    border: "1px solid red",
+    overflow: "hidden",
   },
   intro: {
     fontFamily: "Poppins",
@@ -107,36 +131,43 @@ const useStyles = makeStyles({
     textAlign: "left",
     marginTop: 5,
     height: 50,
+    border: "1px solid red",
   },
   homeButtons: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     maxWidth: 260,
+    border: "1px solid red",
   },
   downloadCV: {
     minWidth: 128,
     minHeight: 47,
     background: "#FF4900",
+    border: "1px solid red",
   },
   mywork: {
     fontFamily: "Poppins",
     color: "white",
     fontWeight: 600,
+    border: "1px solid red",
   },
   downLogo: {
     cursor: "pointer",
-    maxHeight: 80,
-    marginTop: 10,
-    padding: 50,
+    height: 60,
+    marginTop: 0,
+    padding: 30,
     transition: "all 0.2s ease",
     "&:hover": {
-      marginTop: 30,
+      marginTop: 20,
     },
+    border: "1px solid red",
+    overflow: "hidden",
   },
   downLogoSVG: {
     maxHeight: 60,
     maxWidth: 50,
+    border: "1px solid red",
   },
   mLogoImg: {},
   Latter: {
@@ -145,12 +176,9 @@ const useStyles = makeStyles({
       color: "#FF4900",
       fontSize: 79,
     },
+    border: "1px solid red",
   },
 });
-
-const displayWork = () => (window.location = "#work");
-
-const smoothScrollDown = () => (window.location = "#skills");
 
 const downloadCV = () =>
   window.open(
@@ -158,8 +186,12 @@ const downloadCV = () =>
     "_blank"
   );
 
-const Home = () => {
+const Home = ({ handlePageChange }) => {
   const classes = useStyles();
+
+  const displayWork = () => handlePageChange(2);
+
+  const smoothScrollDown = () => handlePageChange(1);
 
   return (
     <div className={classes.root} id="home">
@@ -167,14 +199,19 @@ const Home = () => {
         <div className={classes.logoImage}>
           <img src={Logo} className={classes.mLogoImg} />
         </div>
-
         <div className={classes.menus}>
           <div className={classes.highLighted}>
-            <p className={classes.navItem}>.aboutMe()</p>
+            <p className={classes.navItem} onClick={() => handlePageChange(0)}>
+              .aboutMe()
+            </p>
           </div>
 
-          <p className={classes.navItem}>.skills()</p>
-          <p className={classes.navItem}>.works()</p>
+          <p className={classes.navItem} onClick={() => handlePageChange(1)}>
+            .skills()
+          </p>
+          <p className={classes.navItem} onClick={() => handlePageChange(2)}>
+            .works()
+          </p>
           <p className={classes.navItem}>.contactMe()</p>
         </div>
 

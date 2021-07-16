@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles({
   root: {
     // border: '1px solid red',
-    height: "wrap-content",
+    height: "100%",
     backgroundColor: "#000000",
     paddingTop: 20,
   },
@@ -70,22 +70,18 @@ const Works = () => {
                     </div>
              </div> */}
 
-      <WorkUnit
-        ImgSVG={TentCafeImg}
-        project={"The Tent Cafe"}
-        technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
-        details={
-          "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
-        }
-      />
-      <WorkUnitLeft
-        ImgSVG={BloodBankImg}
-        project={"Blood Bank"}
-        technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
-        details={
-          "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
-        }
-      />
+      <div>
+        <WorkUnit
+          ImgSVG={TentCafeImg}
+          project={"The Tent Cafe"}
+          technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
+          details={
+            "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
+          }
+        />
+      </div>
+
+      {/* 
       <WorkUnit
         ImgSVG={TentCafeImg}
         project={"The Tent Cafe"}
@@ -126,7 +122,7 @@ const Works = () => {
             View All
           </Button>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
