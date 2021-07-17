@@ -3,6 +3,9 @@ import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Works from "./Pages/Works";
 import Hireme from "./Pages/Hireme";
+import Contact from "./Pages/Contact";
+import Activity from "./Pages/Activity";
+import DisplayMore from "./Pages/DisplayMore";
 import ReactPageScroller from "react-page-scroller";
 import { useState } from "react";
 import WorkUnitLeft from "./Component/WorkUnitLeft";
@@ -47,7 +50,10 @@ function App() {
             "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
           }
         />
+        <DisplayMore />
         <Hireme />
+        {/* <Activity /> */}
+        <Contact />
       </ReactPageScroller>
     </div>
   );

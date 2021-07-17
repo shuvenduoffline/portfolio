@@ -12,7 +12,6 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100%",
     backgroundColor: "#000000",
-    overflow: "hidden",
     border: "1px solid red",
   },
   logoImage: {
@@ -32,7 +31,6 @@ const useStyles = makeStyles({
     paddingTop: 20,
     flex: 6,
     border: "1px solid red",
-    overflow: "hidden",
   },
   navItem: {
     fontFamily: "Poppins",
@@ -51,7 +49,6 @@ const useStyles = makeStyles({
     justifyContent: "space-evenly",
     flex: 3,
     border: "1px solid red",
-    overflow: "hidden",
   },
   hireme: {
     display: "flex",
@@ -193,6 +190,26 @@ const Home = ({ handlePageChange }) => {
 
   const smoothScrollDown = () => handlePageChange(1);
 
+  const TypingAnimation = React.memo(() => {
+    return (
+      <Typical
+        loop={Infinity}
+        className={classes.intro}
+        wrapper="p"
+        steps={[
+          "A Professional Java Developer!",
+          2000,
+          "A Professional ReactJS Developer!",
+          2500,
+          `I build new projects just to tickle my brain and love teaching others how they're made.`,
+          3000,
+          `While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.`,
+          4000,
+        ]}
+      />
+    );
+  }, [classes]);
+
   return (
     <div className={classes.root} id="home">
       <div className={classes.navigations}>
@@ -247,21 +264,23 @@ const Home = ({ handlePageChange }) => {
           {/* <h3 className={classes.intro}>
                         A Professional Java Developer and UI/UX Designer!
                     </h3> */}
-          <Typical
+          {/* <Typical
             className={classes.intro}
             steps={[
               "A Professional Java Developer!",
               2000,
               "A Professional ReactJS Developer!",
-              2000,
+              2500,
               `I build new projects just to tickle my brain and love teaching others how they're made.`,
               3000,
               `While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.`,
-              3000,
+              4000,
             ]}
             loop={Infinity}
             wrapper="p"
-          />
+          /> */}
+
+          <TypingAnimation />
           <div className={classes.homeButtons}>
             <Button
               variant="contained"

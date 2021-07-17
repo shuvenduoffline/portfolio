@@ -1,0 +1,10 @@
+<svg id="Group_34857" data-name="Group 34857" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect id="Rectangle_1041" data-name="Rectangle 1041" width="64" height="64" fill="none"/>
+  <path id="Path_36904" data-name="Path 36904" d="M251,300a1,1,0,0,1-1-1V281a1,1,0,0,1,1-1h3a1,1,0,0,1,1,1v13a1,1,0,0,0,1,1h32a1,1,0,0,0,1-1V281a1,1,0,0,1,1-1h3a1,1,0,0,1,1,1v18a1,1,0,0,1-1,1Z" transform="translate(-240 -240)" fill="#c1d5e4" fill-rule="evenodd"/>
+  <path id="Path_36905" data-name="Path 36905" d="M253,280a1,1,0,0,0-1,1v18a1,1,0,0,0,1,1h-2a1,1,0,0,1-1-1V281a1,1,0,0,1,1-1Zm39,0a1,1,0,0,0-1,1v13a1,1,0,0,1-1,1h-2a1,1,0,0,0,1-1V281a1,1,0,0,1,1-1Z" transform="translate(-240 -240)" fill="#9bb9c1" fill-rule="evenodd"/>
+  <path id="Path_36906" data-name="Path 36906" d="M255,337a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1v22a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1Z" transform="translate(-316 300) rotate(-90)" fill="#fcb860" fill-rule="evenodd"/>
+  <path id="Path_36907" data-name="Path 36907" d="M255,337a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1v22a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1Z" transform="matrix(0.792, -0.611, 0.611, 0.792, -364.483, -106.401)" fill="#fcb860" fill-rule="evenodd"/>
+  <path id="Path_36908" data-name="Path 36908" d="M255,337a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1v22a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1Z" transform="matrix(0.631, -0.775, 0.775, 0.631, -388.079, -2.33)" fill="#fcb860" fill-rule="evenodd"/>
+  <path id="Path_36909" data-name="Path 36909" d="M255,337a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1v22a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1Z" transform="matrix(0.431, -0.902, 0.902, 0.431, -386.852, 107.614)" fill="#fcb860" fill-rule="evenodd"/>
+  <path id="Path_36910" data-name="Path 36910" d="M255,337a1,1,0,0,0-1-1h-3a1,1,0,0,0-1,1v22a1,1,0,0,0,1,1h3a1,1,0,0,0,1-1Z" transform="matrix(0.216, -0.976, 0.976, 0.216, -361.334, 210.077)" fill="#fcb860" fill-rule="evenodd"/>
+</svg>

@@ -7,15 +7,14 @@ import Idea from "../assets/idea.jpg";
 const useStyles = makeStyles({
   root: {
     height: "100vh",
-    // backgroundColor: "#000000",
     paddingTop: 20,
     display: "flex",
     justifyContent: "center",
     textAlign: "center",
     alignItems: "center",
+    backgroundColor: "#000000",
     backgroundImage: `url(${Idea})`,
     backgroundSize: "cover",
-    // backgroundPosition: "center",
   },
   hiremeButton: {
     minWidth: 128,
