@@ -12,7 +12,6 @@ const useStyles = makeStyles({
     width: "100%",
     height: "100%",
     backgroundColor: "#000000",
-    border: "1px solid red",
   },
   logoImage: {
     width: 220,
@@ -21,7 +20,6 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "flex-start",
     paddingRight: 0,
-    border: "1px solid red",
   },
   navigations: {
     display: "flex",
@@ -30,7 +28,6 @@ const useStyles = makeStyles({
     paddingRight: 80,
     paddingTop: 20,
     flex: 6,
-    border: "1px solid red",
   },
   navItem: {
     fontFamily: "Poppins",
@@ -41,27 +38,23 @@ const useStyles = makeStyles({
     "&:hover": {
       "letter-spacing": 0.2,
     },
-    border: "1px solid red",
   },
   menus: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
     flex: 3,
-    border: "1px solid red",
   },
   hireme: {
     display: "flex",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    border: "1px solid red",
   },
   hiremeButton: {
     minWidth: 128,
     minHeight: 47,
     background: "#FF4900",
-    border: "1px solid red",
   },
   highLighted: {
     background: "#FF4900",
@@ -69,14 +62,13 @@ const useStyles = makeStyles({
     paddingRight: 20,
     marginTop: -20,
     paddingTop: 20,
-    border: "1px solid red",
   },
   bodyDIV: {
     display: "flex",
     flexDirection: "row",
     flex: 2,
     maxHeight: "70%",
-    border: "1px solid red",
+
     width: "95%",
     overflow: "hidden",
   },
@@ -89,18 +81,17 @@ const useStyles = makeStyles({
     marginRight: -100,
     marginTop: 80,
     marginBottom: 80,
-    border: "1px solid red",
   },
   homeImage: {
     flex: 1,
-    border: "1px solid red",
+
     overflow: "hidden",
   },
   imageCompter: {
     maxWidth: 700,
     maxHeight: 500,
-    border: "1px solid red",
     overflow: "hidden",
+    marginTop: 45,
   },
   myNameWr: {
     textAlign: "left",
@@ -110,13 +101,13 @@ const useStyles = makeStyles({
     fontSize: 80,
     margin: 0,
     cursor: "default",
-    border: "1px solid red",
+
     overflow: "hidden",
   },
   hisvg: {
     maxHeight: 60,
     maxWidth: 140,
-    border: "1px solid red",
+
     overflow: "hidden",
   },
   intro: {
@@ -128,26 +119,22 @@ const useStyles = makeStyles({
     textAlign: "left",
     marginTop: 5,
     height: 50,
-    border: "1px solid red",
   },
   homeButtons: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     maxWidth: 260,
-    border: "1px solid red",
   },
   downloadCV: {
     minWidth: 128,
     minHeight: 47,
     background: "#FF4900",
-    border: "1px solid red",
   },
   mywork: {
     fontFamily: "Poppins",
     color: "white",
     fontWeight: 600,
-    border: "1px solid red",
   },
   downLogo: {
     cursor: "pointer",
@@ -158,13 +145,12 @@ const useStyles = makeStyles({
     "&:hover": {
       marginTop: 20,
     },
-    border: "1px solid red",
+
     overflow: "hidden",
   },
   downLogoSVG: {
     maxHeight: 60,
     maxWidth: 50,
-    border: "1px solid red",
   },
   mLogoImg: {},
   Latter: {
@@ -173,7 +159,6 @@ const useStyles = makeStyles({
       color: "#FF4900",
       fontSize: 79,
     },
-    border: "1px solid red",
   },
 });
 
@@ -190,6 +175,8 @@ const Home = ({ handlePageChange }) => {
 
   const smoothScrollDown = () => handlePageChange(1);
 
+  const contactMe = () => handlePageChange(7);
+
   const TypingAnimation = React.memo(() => {
     return (
       <Typical
@@ -201,9 +188,9 @@ const Home = ({ handlePageChange }) => {
           2000,
           "A Professional ReactJS Developer!",
           2500,
-          `I build new projects just to tickle my brain and love teaching others how they're made.`,
+          `I build new projects just to tickle my brain and to apply and multiply skills.`,
           3000,
-          `While I keep busy teaching courses, I still take interviews in search of a great team & projects that interest me.`,
+          `While I keep busy building stuff, I still take interviews in search of a great team & projects that interest me.`,
           4000,
         ]}
       />
@@ -229,7 +216,9 @@ const Home = ({ handlePageChange }) => {
           <p className={classes.navItem} onClick={() => handlePageChange(2)}>
             .works()
           </p>
-          <p className={classes.navItem}>.contactMe()</p>
+          <p className={classes.navItem} onClick={() => contactMe()}>
+            .contactMe()
+          </p>
         </div>
 
         <div className={classes.hireme}>
@@ -237,6 +226,7 @@ const Home = ({ handlePageChange }) => {
             variant="contained"
             color="primary"
             className={classes.hiremeButton}
+            onClick={() => contactMe()}
           >
             Hire Me!
           </Button>

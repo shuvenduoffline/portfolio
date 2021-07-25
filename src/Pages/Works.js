@@ -74,9 +74,9 @@ const Works = () => {
         <WorkUnit
           ImgSVG={TentCafeImg}
           project={"The Tent Cafe"}
-          technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
+          technology={"ReactJS,Cloud Function, Firebase, Twilio, NodeJS"}
           details={
-            "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
+            "Platform to book table, order food via WhatsApp chatbot. The cafe could book and manage booking through an interactive dashboard. Boosted cafes revenue by 30% using this solution."
           }
         />
       </div>

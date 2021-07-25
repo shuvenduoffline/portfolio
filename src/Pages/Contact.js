@@ -6,6 +6,7 @@ import Location from "../assets/location.svg";
 import StackOverFlow from "../assets/stack_overflow.svg";
 import Linkdin from "../assets/linkdin.svg";
 import Github from "../assets/github.svg";
+import LeetCode from "../assets/leetcode.svg";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {
@@ -14,6 +15,10 @@ import {
   withStyles,
   createTheme,
 } from "@material-ui/core/styles";
+
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_oJu8mkQAC3J1yE8xKoZAf");
 
 const CssTextField = withStyles({
   root: {
@@ -46,7 +51,6 @@ const CssTextField = withStyles({
 
 const useStyles = makeStyles({
   root: {
-    border: "1px solid red",
     height: "100%",
     background: "#000000",
     display: "flex",
@@ -56,7 +60,6 @@ const useStyles = makeStyles({
     paddingTop: 20,
   },
   container: {
-    border: "1px solid red",
     margin: "0px 120px 0px 120px",
     width: "100%",
     height: "wrap-content",
@@ -65,13 +68,11 @@ const useStyles = makeStyles({
     flex: 3,
   },
   left: {
-    border: "1px solid red",
     flex: 1.3,
     textAlign: "left",
     height: 500,
   },
   right: {
-    border: "1px solid red",
     flex: 1.7,
     textAlign: "left",
     marginLeft: 20,
@@ -159,7 +160,8 @@ const useStyles = makeStyles({
   inputRow: {
     display: "flex",
     justifyContent: "space-between",
-    marginTop: 20,
+    marginTop: 5,
+    height: 80,
   },
   inputElementBox: {
     color: "white",
@@ -169,15 +171,16 @@ const useStyles = makeStyles({
   },
   inputRowBox: {
     width: "100%",
-    marginTop: 20,
+    marginTop: 4,
+    height: 160,
   },
   hiremeButton: {
     minWidth: 128,
     minHeight: 50,
     background: "#FF4900",
-    border: "1px solid red",
+
     marginLeft: 10,
-    marginTop: 17,
+    marginTop: -8,
   },
   copyRight: {
     color: "white",
@@ -185,7 +188,32 @@ const useStyles = makeStyles({
     position: "absolute",
     marginTop: "40%",
   },
+  backToTop: {
+    position: "absolute",
+
+    // left: 0,
+    right: 30,
+    // top: 2,
+    marginTop: 40,
+    // bottom: 50,
+  },
 });
+
+const re =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const validateEmail = (email) => {
+  return re.test(String(email).toLowerCase());
+};
+
+const openStakOverFlow = () =>
+  window.open(
+    "https://stackoverflow.com/users/10884670/shuvendu-dhal",
+    "_blank"
+  );
+const openGithub = () =>
+  window.open("https://github.com/shuvenduoffline", "_blank");
+const openLinkDin = () =>
+  window.open("https://leetcode.com/shuvenduoffline/", "_blank");
 
 const Contact = () => {
   const classes = useStyles();
@@ -194,6 +222,43 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
+  const [btnText, setBtnText] = useState("Send");
+
+  const isPhoneValid = phone && !isNaN(phone) && phone.length === 10;
+  const isNameValid = name && isNaN(name) && name.length >= 2;
+
+  const sendMessage = (email, phone, name, subject, message) => {
+    console.log(email, phone, name, subject, message);
+
+    var templateParams = {
+      from_name: name,
+      to_name: subject + phone,
+      message: message,
+      reply_to: email,
+    };
+
+    emailjs.send("service_sy2xce8", "template_s97j4mh", templateParams).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        setBtnText("Sent!");
+        setTimeout(() => {
+          setName("");
+          setPhone("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
+          setBtnText("Send");
+        }, 1500);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+        setBtnText("Something went wrong!");
+        setTimeout(() => {
+          setBtnText("Send");
+        }, 1500);
+      }
+    );
+  };
 
   return (
     <div className={classes.root} id="contact">
@@ -240,9 +305,21 @@ const Contact = () => {
           <h2 className={classes.findMeOn}>Find Me on</h2>
 
           <div className={classes.socialLinkBox}>
-            <img src={StackOverFlow} className={classes.icons} />
-            <img src={Linkdin} className={classes.icons} />
-            <img src={Github} className={classes.icons} />
+            <img
+              src={StackOverFlow}
+              className={classes.icons}
+              onClick={() => openStakOverFlow()}
+            />
+            <img
+              src={LeetCode}
+              className={classes.icons}
+              onClick={() => openLinkDin()}
+            />
+            <img
+              src={Github}
+              className={classes.icons}
+              onClick={() => openGithub()}
+            />
           </div>
         </div>
         <div className={classes.right}>
@@ -250,6 +327,7 @@ const Contact = () => {
           <div className={classes.myForm}>
             <div className={classes.inputRow}>
               <CssTextField
+                error={!isNameValid && name}
                 label="Name"
                 variant="outlined"
                 id="custom-css-outlined-input"
@@ -260,9 +338,11 @@ const Contact = () => {
                 }}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                helperText={!isNameValid && name && "Enter Valid Name!"}
               />
 
               <CssTextField
+                error={!isPhoneValid && phone}
                 label="Phone"
                 variant="outlined"
                 id="custom-css-outlined-input"
@@ -273,10 +353,12 @@ const Contact = () => {
                 }}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                helperText={!isPhoneValid && phone && "Phone Number Not Valid!"}
               />
             </div>
             <div className={classes.inputRow}>
               <CssTextField
+                error={!validateEmail(email) && email}
                 label="Email"
                 variant="outlined"
                 id="custom-css-outlined-input"
@@ -287,6 +369,7 @@ const Contact = () => {
                 }}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                helperText={!validateEmail(email) && email && "Invalid Email!"}
               />
 
               <CssTextField
@@ -304,6 +387,7 @@ const Contact = () => {
             </div>
             <div className={classes.inputRowBox}>
               <CssTextField
+                error={email && validateEmail(email) && !message}
                 label="Message"
                 variant="outlined"
                 multiline
@@ -316,6 +400,12 @@ const Contact = () => {
                 }}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                helperText={
+                  email &&
+                  validateEmail(email) &&
+                  !message &&
+                  "Please write some massage!"
+                }
               />
             </div>
           </div>
@@ -324,13 +414,27 @@ const Contact = () => {
             variant="contained"
             color="primary"
             className={classes.hiremeButton}
+            onClick={() => {
+              if (!email) {
+                setEmail("You forgot to write ur email");
+              } else if (
+                validateEmail(email) &&
+                isNameValid &&
+                (!phone || isPhoneValid) &&
+                message &&
+                btnText === "Send"
+              ) {
+                setBtnText("Sending...");
+                sendMessage(email, phone, name, subject, message);
+              }
+            }}
           >
-            Hire Me!
+            {btnText}
           </Button>
+          <div className={classes.backToTop}>BACKT</div>
         </div>
       </div>
       <p className={classes.copyRight}>
-        {" "}
         Copyright ©2021Offline. All Rights Reserved.
       </p>
     </div>

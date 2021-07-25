@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TentCafeImg from "../assets/tent_cafe.PNG";
+import ViewMoreBg from "../assets/viewmorebg.png";
 import WorkUnit from "../Component/WorkUnit";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
@@ -121,7 +121,7 @@ const DisplayMore = ({ showShadow = true }) => {
         <span
           className={classes.imageSrc}
           style={{
-            backgroundImage: `url(${TentCafeImg})`,
+            backgroundImage: `url(${ViewMoreBg})`,
           }}
         />
         <span className={classes.imageBackdrop} />
@@ -132,7 +132,7 @@ const DisplayMore = ({ showShadow = true }) => {
             color="inherit"
             className={classes.imageTitle}
           >
-            {"View More"}
+            {"Highlights"}
             <span className={classes.imageMarked} />
           </Typography>
         </span>

@@ -19,7 +19,7 @@ const colorarray = [
 
 const data = [
   {
-    label: "React",
+    label: "React.js",
     fontSize: 10,
     opacity: 8,
     color: "blue",
@@ -35,7 +35,7 @@ const data = [
     opacity: 7,
   },
   {
-    label: "webpack",
+    label: "Nginx",
     fontSize: 4,
     opacity: 4,
   },
@@ -45,7 +45,7 @@ const data = [
     opacity: 7,
   },
   {
-    label: "HTML5",
+    label: "Atlaskit",
     fontSize: 9,
     opacity: 9,
   },
@@ -60,7 +60,7 @@ const data = [
     opacity: 8,
   },
   {
-    label: "CSS3",
+    label: "Twilio",
     fontSize: 9,
     opacity: 9,
   },
@@ -152,7 +152,6 @@ const useStyles = makeStyles({
   },
   right: {
     flex: 2,
-
     textAlign: "left",
     fontFamily: "Poppins",
     color: "white",
@@ -205,7 +204,7 @@ const Skills = () => {
             colorarray={colorarray}
           >
             {renderData(data)}
-            <div
+            {/* <div
               style={{
                 fontSize: 30,
                 fontWeight: "bold",
@@ -216,14 +215,16 @@ const Skills = () => {
               }}
             >
               Black
-            </div>
+            </div> */}
           </TagCloud>
         </div>
         <div className={classes.right}>
           <h2>Read About My Life Struggle Story!</h2>
           <p>
-            This skills are gather by doing freelance project. Etc etc
-            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+            Since my college days, I have been taking projects, designing and
+            building them with different technologies. Done internships from
+            Startup, currently working in the software architect. I regularly
+            build things to practice and explore new technology skills.
           </p>
           <h5>Java</h5>
           <SkillBar color="#FF4900" success={95} />
@@ -234,6 +235,10 @@ const Skills = () => {
           <h5>React JS</h5>
           <SkillBar color="#FF4900" success={70} />
           <h5>Node JS</h5>
+          <SkillBar color="#FF4900" success={75} />
+          <h5>Python</h5>
+          <SkillBar color="#FF4900" success={65} />
+          <h5>C++</h5>
           <SkillBar color="#FF4900" success={75} />
         </div>
       </div>

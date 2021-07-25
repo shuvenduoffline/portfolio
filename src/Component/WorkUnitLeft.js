@@ -56,7 +56,7 @@ const useStyles = makeStyles({
   projectName: {
     fontFamily: "Poppins",
     color: "white",
-    fontSize: 20,
+    fontSize: 22,
   },
   techs: {
     fontFamily: "Poppins",

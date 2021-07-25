@@ -10,6 +10,7 @@ import ReactPageScroller from "react-page-scroller";
 import { useState } from "react";
 import WorkUnitLeft from "./Component/WorkUnitLeft";
 import BloodBankImg from "./assets/blood_bank.png";
+import Austec from "./assets/austec.png";
 import TentCafeImg from "./assets/tent_cafe.PNG";
 import WorkUnit from "./Component/WorkUnit";
 
@@ -37,21 +38,23 @@ function App() {
         <WorkUnitLeft
           ImgSVG={BloodBankImg}
           project={"Blood Bank"}
-          technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
+          technology={"ReactJS, Solidity, Ethereum, Block Chain"}
           details={
-            "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
+            "New Generations Blood Bank powered by decentralize blockchain solution. Build on Ethereum Network. Blood Collection to Blood Verification, Distribution is all done with a fully decentralized system."
           }
         />
         <WorkUnit
-          ImgSVG={TentCafeImg}
-          project={"The Tent Cafe"}
-          technology={"ReactJS, CSS, Firebase, Twillio, NodeJS"}
+          ImgSVG={Austec}
+          project={"Austec Services"}
+          technology={
+            "ReactJS, Node JS, AWS, React Native, TypeScript, iOS App"
+          }
           details={
-            "Lorem ipsum dolor sit amet,Stet clita kasd lorem ipsum dolor sit amet. sed diam  eirmod tempor dolore."
+            "Designed and developed an application to effectively assigning guards to their duty, and keep track of their works and their performances. Build web app and hybrid mobile application to keep tracking of everything and login into the shifts."
           }
         />
         <DisplayMore />
-        <Hireme />
+        <Hireme handlePageChange={handlePageChange} />
         {/* <Activity /> */}
         <Contact />
       </ReactPageScroller>

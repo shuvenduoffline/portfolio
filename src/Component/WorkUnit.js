@@ -54,11 +54,12 @@ const useStyles = makeStyles({
       scale: 1.01,
       cursor: "pointer",
     },
+    maxWidth: 800,
   },
   projectName: {
     fontFamily: "Poppins",
     color: "white",
-    fontSize: 20,
+    fontSize: 22,
   },
   techs: {
     fontFamily: "Poppins",

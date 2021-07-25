@@ -40,7 +40,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Hireme = () => {
+const Hireme = ({ handlePageChange }) => {
   const classes = useStyles();
   const [fedIn, setFedIn] = React.useState(false);
 
@@ -48,6 +48,8 @@ const Hireme = () => {
     setFedIn(true);
     return () => setFedIn(false);
   }, []);
+
+  const hireMe = () => handlePageChange(7);
 
   return (
     <div className={classes.root} id="hireme">
@@ -67,6 +69,7 @@ const Hireme = () => {
           variant="contained"
           color="primary"
           className={classes.hiremeButton}
+          onClick={() => hireMe()}
         >
           Hire Me!
         </Button>
