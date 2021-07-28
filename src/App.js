@@ -5,6 +5,7 @@ import Works from "./Pages/Works";
 import Hireme from "./Pages/Hireme";
 import Contact from "./Pages/Contact";
 import Activity from "./Pages/Activity";
+import EducationAndAward from "./Pages/EducationAndAward";
 import DisplayMore from "./Pages/DisplayMore";
 import ReactPageScroller from "react-page-scroller";
 import { useState } from "react";
@@ -56,6 +57,7 @@ function App() {
         <DisplayMore />
         <Hireme handlePageChange={handlePageChange} />
         {/* <Activity /> */}
+        <EducationAndAward />
         <Contact />
       </ReactPageScroller>
     </div>

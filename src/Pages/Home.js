@@ -175,7 +175,7 @@ const Home = ({ handlePageChange }) => {
 
   const smoothScrollDown = () => handlePageChange(1);
 
-  const contactMe = () => handlePageChange(7);
+  const contactMe = () => handlePageChange(8);
 
   const TypingAnimation = React.memo(() => {
     return (
