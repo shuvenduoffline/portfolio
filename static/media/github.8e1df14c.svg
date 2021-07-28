@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.2" height="42.05" viewBox="0 0 42.2 42.05">
+  <g id="Page-1" transform="translate(0.2 0.076)">
+    <g id="Artboard" transform="translate(1 0.973)">
+      <g id="github" transform="translate(0 0)">
+        <path id="Shape" d="M14.359,35.266C4.1,38.12,4.1,30.51,0,29.559M28.718,40.973V33.611a6.145,6.145,0,0,0-1.928-4.965C33.231,27.98,40,25.716,40,15.33A9.96,9.96,0,0,0,36.924,8.2a9,9,0,0,0-.186-7.173S34.318.358,28.718,3.84a29.523,29.523,0,0,0-14.359,0C8.759.358,6.338,1.024,6.338,1.024A9,9,0,0,0,6.154,8.2a9.957,9.957,0,0,0-3.077,7.191c0,10.311,6.769,12.574,13.21,13.316a6.147,6.147,0,0,0-1.928,4.908v7.362" transform="translate(0 -0.973)" fill="rgba(0,0,0,0)" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>
