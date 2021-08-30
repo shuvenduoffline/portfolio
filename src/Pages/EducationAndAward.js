@@ -1,18 +1,18 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import graduation from "../assets/graduation.svg";
-import Caluniv from "../assets/Calcutta_University_Logo.svg";
-import Achivment from "../assets/achivment.svg";
-import RightArrow from "../assets/right_arrow.svg";
-import Language from "../assets/language.svg";
-import KKI from "../assets/kki.png";
 import Timeline from "@material-ui/lab/Timeline";
-import TimelineItem from "@material-ui/lab/TimelineItem";
-import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
 import TimelineConnector from "@material-ui/lab/TimelineConnector";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineDot from "@material-ui/lab/TimelineDot";
+import TimelineItem from "@material-ui/lab/TimelineItem";
+import TimelineSeparator from "@material-ui/lab/TimelineSeparator";
+import React from "react";
 import Typical from "react-typical";
+import Achivment from "../assets/achivment.svg";
+import Caluniv from "../assets/Calcutta_University_Logo.svg";
+import graduation from "../assets/graduation.svg";
+import KKI from "../assets/kki.png";
+import Language from "../assets/language.svg";
+import RightArrow from "../assets/right_arrow.svg";
 
 const useStyles = makeStyles({
   root: {
@@ -216,7 +216,7 @@ const EducationAndAward = () => {
                   <h6 className={classes.mrzo}>
                     Higher Secondary with First Class First
                   </h6>
-                  <p className={classes.year}>(2016-2020)</p>
+                  <p className={classes.year}>(~-2014)</p>
                 </div>
               </TimelineContent>
             </TimelineItem>

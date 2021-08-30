@@ -1,23 +1,17 @@
+import Button from "@material-ui/core/Button";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import emailjs, { init } from "emailjs-com";
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import BackToTop from "../assets/backtotop.svg";
 import Call from "../assets/call.svg";
 import Email from "../assets/email.svg";
-import Location from "../assets/location.svg";
-import StackOverFlow from "../assets/stack_overflow.svg";
-import Linkdin from "../assets/linkdin.svg";
 import Github from "../assets/github.svg";
 import LeetCode from "../assets/leetcode.svg";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import {
-  alpha,
-  ThemeProvider,
-  withStyles,
-  createTheme,
-} from "@material-ui/core/styles";
+import Location from "../assets/location.svg";
+import Medium from "../assets/medium.svg";
+import StackOverFlow from "../assets/stack_overflow.svg";
 
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
 init("user_oJu8mkQAC3J1yE8xKoZAf");
 
 const CssTextField = withStyles({
@@ -192,10 +186,19 @@ const useStyles = makeStyles({
     position: "absolute",
 
     // left: 0,
-    right: 30,
+    right: 40,
     // top: 2,
-    marginTop: 40,
+    marginTop: 30,
     // bottom: 50,
+  },
+  BTicons: {
+    width: 40,
+    height: 35,
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+    "&:hover": {
+      scale: 1.1,
+    },
   },
 });
 
@@ -212,10 +215,17 @@ const openStakOverFlow = () =>
   );
 const openGithub = () =>
   window.open("https://github.com/shuvenduoffline", "_blank");
+
 const openLinkDin = () =>
   window.open("https://leetcode.com/shuvenduoffline/", "_blank");
 
-const Contact = () => {
+const openMedium = () =>
+  window.open("https://medium.com/@shuvenduoffline", "_blank");
+
+const openCall = () => (window.href = "tel:+918240478563");
+const openMail = () => (window.href = "mailto: shuvenduoffline@gmail.com");
+
+const Contact = ({ handlePageChange }) => {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -270,7 +280,7 @@ const Contact = () => {
             thing more visual or conceptual?
           </p>
 
-          <div className={classes.medium}>
+          <div className={classes.medium} onClick={() => openCall()}>
             <div className={classes.logo}>
               <img src={Call} />
             </div>
@@ -280,7 +290,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className={classes.medium}>
+          <div className={classes.medium} onClick={() => openMail()}>
             <div className={classes.logo}>
               <img src={Email} />
             </div>
@@ -305,6 +315,11 @@ const Contact = () => {
           <h2 className={classes.findMeOn}>Find Me on</h2>
 
           <div className={classes.socialLinkBox}>
+            <img
+              src={Medium}
+              className={classes.icons}
+              onClick={() => openMedium()}
+            />
             <img
               src={StackOverFlow}
               className={classes.icons}
@@ -431,7 +446,13 @@ const Contact = () => {
           >
             {btnText}
           </Button>
-          <div className={classes.backToTop}>BACKT</div>
+          <div className={classes.backToTop}>
+            <img
+              src={BackToTop}
+              className={classes.BTicons}
+              onClick={() => handlePageChange(0)}
+            />
+          </div>
         </div>
       </div>
       <p className={classes.copyRight}>

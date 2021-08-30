@@ -1,6 +1,5 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import GitHubCalendar from "github-calendar";
+import React from "react";
 
 const useStyles = makeStyles({
   root: {

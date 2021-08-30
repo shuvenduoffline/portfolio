@@ -1,10 +1,7 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
 import TentCafeImg from "../assets/tent_cafe.PNG";
-import BloodBankImg from "../assets/blood_bank.png";
 import WorkUnit from "../Component/WorkUnit";
-import WorkUnitLeft from "../Component/WorkUnitLeft";
-import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles({
   root: {
@@ -78,6 +75,7 @@ const Works = () => {
           details={
             "Platform to book table, order food via WhatsApp chatbot. The cafe could book and manage booking through an interactive dashboard. Boosted cafes revenue by 30% using this solution."
           }
+          link={"https://thetentcafe-d80c3.web.app/"}
         />
       </div>
 

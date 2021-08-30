@@ -1,11 +1,11 @@
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import Logo from "../assets/logo.svg";
-import HiSVG from "../assets/hello.svg";
+import Typical from "react-typical";
 import ComputerSVG from "../assets/computer.svg";
 import DownSVG from "../assets/downarrow.svg";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Typical from "react-typical";
+import HiSVG from "../assets/hello.svg";
+import Logo from "../assets/logo.svg";
 
 const useStyles = makeStyles({
   root: {
@@ -215,6 +215,9 @@ const Home = ({ handlePageChange }) => {
           </p>
           <p className={classes.navItem} onClick={() => handlePageChange(2)}>
             .works()
+          </p>
+          <p className={classes.navItem} onClick={() => handlePageChange(7)}>
+            .education()
           </p>
           <p className={classes.navItem} onClick={() => contactMe()}>
             .contactMe()

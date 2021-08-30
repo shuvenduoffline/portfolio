@@ -1,7 +1,7 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Fade from "@material-ui/core/Fade";
+import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
 import Idea from "../assets/idea.jpg";
 
 const useStyles = makeStyles({
@@ -49,7 +49,7 @@ const Hireme = ({ handlePageChange }) => {
     return () => setFedIn(false);
   }, []);
 
-  const hireMe = () => handlePageChange(7);
+  const hireMe = () => handlePageChange(8);
 
   return (
     <div className={classes.root} id="hireme">

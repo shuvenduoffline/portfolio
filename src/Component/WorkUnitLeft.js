@@ -1,6 +1,5 @@
-import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import TentCafeImg from "../assets/tent_cafe.PNG";
+import React from "react";
 import RightArrowSVG from "../assets/rightarrow.svg";
 
 const useStyles = makeStyles({
@@ -82,7 +81,9 @@ const useStyles = makeStyles({
   },
 });
 
-const WorkUnitLeft = ({ ImgSVG, project, technology, details }) => {
+const openLink = (link) => link && window.open(link, "_blank");
+
+const WorkUnitLeft = ({ ImgSVG, project, technology, details, link = "" }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
@@ -90,10 +91,18 @@ const WorkUnitLeft = ({ ImgSVG, project, technology, details }) => {
         <h4 className={classes.projectName}> {project} </h4>
         <p className={classes.techs}>{technology}</p>
         <p className={classes.projectDec}>{details}</p>
-        <img src={RightArrowSVG} className={classes.rightArrow} />
+        <img
+          src={RightArrowSVG}
+          className={classes.rightArrow}
+          onClick={() => openLink(link)}
+        />
       </div>
 
-      <img src={ImgSVG} className={classes.showCase} />
+      <img
+        src={ImgSVG}
+        className={classes.showCase}
+        onClick={() => openLink(link)}
+      />
     </div>
   );
 };

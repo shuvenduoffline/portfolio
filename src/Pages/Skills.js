@@ -1,12 +1,8 @@
-import React from "react";
-import Logo from "../assets/logo.svg";
-import HiSVG from "../assets/hello.svg";
-import ComputerSVG from "../assets/computer.svg";
-import DownSVG from "../assets/downarrow.svg";
 import { makeStyles } from "@material-ui/core/styles";
+import TagCloud, { renderData } from "d3-tagcloud-for-react";
+import React from "react";
 // import SkillBar from 'react-skillbars';
 import SkillBar from "../Component/SkillBar";
-import TagCloud, { renderData } from "d3-tagcloud-for-react";
 
 const colorarray = [
   "#8c5fc4",

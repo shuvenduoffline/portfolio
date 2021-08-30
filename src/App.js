@@ -1,19 +1,20 @@
+import { useState } from "react";
+import ReactGA from "react-ga";
+import ReactPageScroller from "react-page-scroller";
 import "./App.css";
+import Austec from "./assets/austec.png";
+import BloodBankImg from "./assets/blood_bank.png";
+import WorkUnit from "./Component/WorkUnit";
+import WorkUnitLeft from "./Component/WorkUnitLeft";
+import Contact from "./Pages/Contact";
+import DisplayMore from "./Pages/DisplayMore";
+import EducationAndAward from "./Pages/EducationAndAward";
+import Hireme from "./Pages/Hireme";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Works from "./Pages/Works";
-import Hireme from "./Pages/Hireme";
-import Contact from "./Pages/Contact";
-import Activity from "./Pages/Activity";
-import EducationAndAward from "./Pages/EducationAndAward";
-import DisplayMore from "./Pages/DisplayMore";
-import ReactPageScroller from "react-page-scroller";
-import { useState } from "react";
-import WorkUnitLeft from "./Component/WorkUnitLeft";
-import BloodBankImg from "./assets/blood_bank.png";
-import Austec from "./assets/austec.png";
-import TentCafeImg from "./assets/tent_cafe.PNG";
-import WorkUnit from "./Component/WorkUnit";
+
+ReactGA.initialize("G-LX949WZLD7");
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -24,6 +25,9 @@ function App() {
 
   const handleBeforePageChange = (number) => {
     console.log(number);
+    ReactGA.pageview(
+      window.location.pathname + window.location.search + number
+    );
   };
 
   return (
@@ -43,6 +47,7 @@ function App() {
           details={
             "New Generations Blood Bank powered by decentralize blockchain solution. Build on Ethereum Network. Blood Collection to Blood Verification, Distribution is all done with a fully decentralized system."
           }
+          link={"https://shuvenduoffline.github.io/bloodbank/"}
         />
         <WorkUnit
           ImgSVG={Austec}
@@ -53,12 +58,13 @@ function App() {
           details={
             "Designed and developed an application to effectively assigning guards to their duty, and keep track of their works and their performances. Build web app and hybrid mobile application to keep tracking of everything and login into the shifts."
           }
+          link={"https://roster.austecservices.com.au/"}
         />
         <DisplayMore />
         <Hireme handlePageChange={handlePageChange} />
         {/* <Activity /> */}
         <EducationAndAward />
-        <Contact />
+        <Contact handlePageChange={handlePageChange} />
       </ReactPageScroller>
     </div>
   );
