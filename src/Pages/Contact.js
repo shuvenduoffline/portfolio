@@ -192,8 +192,8 @@ const useStyles = makeStyles({
     // bottom: 50,
   },
   BTicons: {
-    width: 40,
-    height: 35,
+    width: 44,
+    height: 44,
     cursor: "pointer",
     transition: "all 0.2s ease",
     "&:hover": {
@@ -286,7 +286,7 @@ const Contact = ({ handlePageChange }) => {
             </div>
             <div className={classes.details}>
               <p className={classes.passive}>Call Me</p>
-              <p className={classes.contactInfo}>+91 8258090295</p>
+              <p className={classes.contactInfo}>+91 8240478563</p>
             </div>
           </div>
 

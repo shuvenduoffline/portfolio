@@ -222,16 +222,16 @@ const Skills = () => {
             Startup, currently working in the software architect. I regularly
             build things to practice and explore new technology skills.
           </p>
-          <h5>Java</h5>
-          <SkillBar color="#FF4900" success={95} />
-          <h5>Spring Boot</h5>
-          <SkillBar color="#FF4900" success={80} />
           <h5>JavaScript</h5>
           <SkillBar color="#FF4900" success={90} />
           <h5>React JS</h5>
           <SkillBar color="#FF4900" success={70} />
           <h5>Node JS</h5>
           <SkillBar color="#FF4900" success={75} />
+          <h5>Java</h5>
+          <SkillBar color="#FF4900" success={95} />
+          <h5>Spring Boot</h5>
+          <SkillBar color="#FF4900" success={80} />
           <h5>Python</h5>
           <SkillBar color="#FF4900" success={65} />
           <h5>C++</h5>

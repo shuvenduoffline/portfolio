@@ -70,8 +70,8 @@ const Works = () => {
       <div>
         <WorkUnit
           ImgSVG={TentCafeImg}
-          project={"The Tent Cafe"}
-          technology={"ReactJS,Cloud Function, Firebase, Twilio, NodeJS"}
+          project={"The Tent Cafe (ChatBot & WebApp)"}
+          technology={"ReactJS, Serverless, Firebase, Twilio, WhatsApp ChatBot"}
           details={
             "Platform to book table, order food via WhatsApp chatbot. The cafe could book and manage booking through an interactive dashboard. Boosted cafes revenue by 30% using this solution."
           }

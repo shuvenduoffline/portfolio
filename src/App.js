@@ -4,6 +4,7 @@ import ReactPageScroller from "react-page-scroller";
 import "./App.css";
 import Austec from "./assets/austec.png";
 import BloodBankImg from "./assets/blood_bank.png";
+import WaterIOTImg from "./assets/iotwater.png";
 import WorkUnit from "./Component/WorkUnit";
 import WorkUnitLeft from "./Component/WorkUnitLeft";
 import Contact from "./Pages/Contact";
@@ -42,7 +43,7 @@ function App() {
         <Works />
         <WorkUnitLeft
           ImgSVG={BloodBankImg}
-          project={"Blood Bank"}
+          project={"Blood Bank (Web3)"}
           technology={"ReactJS, Solidity, Ethereum, Block Chain"}
           details={
             "New Generations Blood Bank powered by decentralize blockchain solution. Build on Ethereum Network. Blood Collection to Blood Verification, Distribution is all done with a fully decentralized system."
@@ -51,7 +52,7 @@ function App() {
         />
         <WorkUnit
           ImgSVG={Austec}
-          project={"Austec Services"}
+          project={"Austec Services (iOS & WebApp)"}
           technology={
             "ReactJS, Node JS, AWS, React Native, TypeScript, iOS App"
           }
@@ -59,6 +60,15 @@ function App() {
             "Designed and developed an application to effectively assigning guards to their duty, and keep track of their works and their performances. Build web app and hybrid mobile application to keep tracking of everything and login into the shifts."
           }
           link={"https://roster.austecservices.com.au/"}
+        />
+        <WorkUnitLeft
+          ImgSVG={WaterIOTImg}
+          project={"Water Distribution (IoT)"}
+          technology={"NextJs, NodeJs, AWS, MicroServices"}
+          details={
+            "Iot based highly scalable water distribution solution to reduce water wastage and ensure a minimum of 5L water daily with proper pressure. Architect, Build, Integrate SMS and automated calling with Servetel, AWS, NodeJS utilizing microservices approach."
+          }
+          link={"https://waterdist.iot.demo.passionatesolver.com/login"}
         />
         <DisplayMore />
         <Hireme handlePageChange={handlePageChange} />

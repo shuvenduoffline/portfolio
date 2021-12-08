@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   ideaQ: {
     fontFamily: "Poppins",
     color: "white",
-    marginBottom: 150,
+    marginBottom: 40,
     transition: "all 0.3s ease",
   },
 });
@@ -56,8 +56,8 @@ const Hireme = ({ handlePageChange }) => {
       <div className={classes.midBox}>
         <Fade in={fedIn}>
           <h3 className={classes.ideaQ}>
-            We Should Invest in People not Ideas. A good Idea is often destroyed
-            by bad people and good people can always make a bad idea better.
+            The first step is to establish that something is possible; Then
+            probability will occur.
           </h3>
         </Fade>
 

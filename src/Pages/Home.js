@@ -184,9 +184,9 @@ const Home = ({ handlePageChange }) => {
         className={classes.intro}
         wrapper="p"
         steps={[
-          "A Professional Java Developer!",
+          "A Professional FullStack Developer!",
           2000,
-          "A Professional ReactJS Developer!",
+          "Mostly works on Nodejs, React, SpringBoot, AWS",
           2500,
           `I build new projects just to tickle my brain and to apply and multiply skills.`,
           3000,
