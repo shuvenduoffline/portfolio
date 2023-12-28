@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import TagCloud, { renderData } from "d3-tagcloud-for-react";
 import React from "react";
-// import SkillBar from 'react-skillbars';
 import SkillBar from "../Component/SkillBar";
 
 const colorarray = [
@@ -116,7 +115,7 @@ const data = [
     opacity: 6,
   },
   {
-    label: "Rabbit MQ",
+    label: "Kafka",
     fontSize: 1,
     opacity: 4,
   },
@@ -124,8 +123,8 @@ const data = [
 
 const useStyles = makeStyles({
   root: {
-    height: "100%",
     width: "100%",
+    height: "100%",
     backgroundColor: "#000000",
   },
   heading: {
@@ -134,7 +133,6 @@ const useStyles = makeStyles({
     fontWeight: 1000,
     fontSize: 35,
     margin: 0,
-    paddingTop: 20,
   },
   container: {
     display: "flex",
@@ -152,6 +150,7 @@ const useStyles = makeStyles({
     fontFamily: "Poppins",
     color: "white",
     marginRight: 100,
+    marginTop: -16,
   },
   skillBar: {
     width: "90%",
@@ -194,7 +193,7 @@ const Skills = () => {
               color: () => randomColor(colorarray),
               padding: 5,
               width: "100%",
-              height: "600px",
+              height: "100%",
             }}
             data={data}
             colorarray={colorarray}
@@ -217,25 +216,21 @@ const Skills = () => {
         <div className={classes.right}>
           <h2>Read About My Life Struggle Story!</h2>
           <p>
-            Since my college days, I have been taking projects, designing and
-            building them with different technologies. Done internships from
-            Startup, currently working in the software architect. I regularly
-            build things to practice and explore new technology skills.
+            I'm on a continuous tech adventure, crafting projects that flex my
+            brain muscles. Each endeavor is a journey of growth, armed with code
+            and a sprinkle of humor. It's not just problem-solving; it's a swift
+            sprint through the tech landscape.
           </p>
-          <h5>JavaScript</h5>
-          <SkillBar color="#FF4900" success={90} />
           <h5>React JS</h5>
-          <SkillBar color="#FF4900" success={70} />
+          <SkillBar color="#FF4900" success={90} />
           <h5>Node JS</h5>
-          <SkillBar color="#FF4900" success={75} />
+          <SkillBar color="#FF4900" success={85} />
           <h5>Java</h5>
-          <SkillBar color="#FF4900" success={95} />
-          <h5>Spring Boot</h5>
-          <SkillBar color="#FF4900" success={80} />
-          <h5>Python</h5>
-          <SkillBar color="#FF4900" success={65} />
-          <h5>C++</h5>
           <SkillBar color="#FF4900" success={75} />
+          <h5>Spring Boot</h5>
+          <SkillBar color="#FF4900" success={70} />
+          <h5>C++</h5>
+          <SkillBar color="#FF4900" success={65} />
         </div>
       </div>
     </div>

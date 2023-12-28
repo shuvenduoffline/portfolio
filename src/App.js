@@ -1,12 +1,13 @@
 import { useState } from "react";
 import ReactGA from "react-ga";
 import ReactPageScroller from "react-page-scroller";
-import "./App.css";
 import Austec from "./assets/austec.png";
 import BloodBankImg from "./assets/blood_bank.png";
 import WaterIOTImg from "./assets/iotwater.png";
+
 import WorkUnit from "./Component/WorkUnit";
 import WorkUnitLeft from "./Component/WorkUnitLeft";
+
 import Contact from "./Pages/Contact";
 import DisplayMore from "./Pages/DisplayMore";
 import EducationAndAward from "./Pages/EducationAndAward";
@@ -14,6 +15,8 @@ import Hireme from "./Pages/Hireme";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Works from "./Pages/Works";
+
+import "./App.css";
 
 ReactGA.initialize("G-LX949WZLD7");
 
@@ -25,7 +28,6 @@ function App() {
   };
 
   const handleBeforePageChange = (number) => {
-    console.log(number);
     ReactGA.pageview(
       window.location.pathname + window.location.search + number
     );

@@ -164,7 +164,11 @@ const EducationAndAward = () => {
     <div className={classes.root} id="education">
       <div className={classes.left}>
         <div className={classes.highLight}>
-          <img src={graduation} className={classes.educationLogo} />
+          <img
+            src={graduation}
+            className={classes.educationLogo}
+            alt={"education_logo"}
+          />
           <h2 className={classes.eduHigh}>EDUCATION</h2>
         </div>
         <div className={classes.timeLineDiv}>
@@ -176,7 +180,11 @@ const EducationAndAward = () => {
               </TimelineSeparator>
               <TimelineContent>
                 <div className={classes.collegeDIV}>
-                  <img src={Caluniv} className={classes.educationLogo} />
+                  <img
+                    src={Caluniv}
+                    className={classes.educationLogo}
+                    alt={"education_logo"}
+                  />
                   <h5 className={classes.mrzo}>UNIVERSITY OF CALCUTTA</h5>
                   <h6 className={classes.mrzo}>
                     B.Tech in Information Technology
@@ -193,7 +201,11 @@ const EducationAndAward = () => {
               </TimelineSeparator>
               <TimelineContent>
                 <div className={classes.collegeDIV}>
-                  <img src={KKI} className={classes.educationLogo} />
+                  <img
+                    src={KKI}
+                    className={classes.educationLogo}
+                    alt={"school_kki"}
+                  />
                   <h5 className={classes.mrzo}>
                     JHARGRAM KUMUD KUMARI INSTITUTION
                   </h5>
@@ -211,7 +223,11 @@ const EducationAndAward = () => {
               </TimelineSeparator>
               <TimelineContent>
                 <div className={classes.collegeDIV}>
-                  <img src={KKI} className={classes.educationLogo} />
+                  <img
+                    src={KKI}
+                    className={classes.educationLogo}
+                    alt={"school_logo"}
+                  />
                   <h5 className={classes.mrzo}>CHARKABONI HIGH SCHOOL</h5>
                   <h6 className={classes.mrzo}>
                     Higher Secondary with First Class First
@@ -225,13 +241,21 @@ const EducationAndAward = () => {
       </div>
       <div className={classes.right}>
         <div className={classes.highLight}>
-          <img src={Achivment} className={classes.educationLogo} />
+          <img
+            src={Achivment}
+            className={classes.educationLogo}
+            alt={"achievements"}
+          />
           <h2 className={classes.eduHigh}>ACHIEVEMENT</h2>
         </div>
         <div className={classes.achevementBox}>
           <div className={classes.achevement} onClick={() => openCopyRight()}>
             <div style={{ width: 40 }}>
-              <img src={RightArrow} className={classes.arrow} />
+              <img
+                src={RightArrow}
+                className={classes.arrow}
+                alt={"right_arrow"}
+              />
             </div>
             <div>
               <h5 className={classes.achivtxt}>Copyright Claim</h5>
@@ -239,14 +263,18 @@ const EducationAndAward = () => {
                 Copyright in a blockchain-based framework for document sharing,
                 preserving, and verification using ethereum
                 <br></br>
-                <a>View Certificate</a>
+                <a href={"/#"}>View Certificate</a>
               </h6>
             </div>
           </div>
 
           <div className={classes.achevement}>
             <div style={{ width: 40 }}>
-              <img src={RightArrow} className={classes.arrow} />
+              <img
+                src={RightArrow}
+                className={classes.arrow}
+                alt={"right_arrow"}
+              />
             </div>
             <div>
               <h5 className={classes.achivtxt}>
@@ -262,7 +290,11 @@ const EducationAndAward = () => {
 
           <div className={classes.achevement}>
             <div style={{ width: 40 }}>
-              <img src={RightArrow} className={classes.arrow} />
+              <img
+                src={RightArrow}
+                className={classes.arrow}
+                alt={"right_arrow"}
+              />
             </div>
             <div>
               <h5 className={classes.achivtxt}>Leadership Role</h5>
@@ -274,7 +306,11 @@ const EducationAndAward = () => {
           </div>
         </div>
         <div className={classes.highLight}>
-          <img src={Language} className={classes.educationLogo} />
+          <img
+            src={Language}
+            className={classes.educationLogo}
+            alt={"language"}
+          />
           <h2 className={classes.eduHigh}>LANGUAGE</h2>
         </div>
         <div>

@@ -5,16 +5,15 @@ import WorkUnit from "../Component/WorkUnit";
 
 const useStyles = makeStyles({
   root: {
-    // border: '1px solid red',
     height: "100%",
     backgroundColor: "#000000",
-    paddingTop: 20,
   },
   heading: {
     fontFamily: "Poppins",
     color: "white",
     fontWeight: 1000,
     fontSize: 35,
+    marginTop: 0,
   },
   description: {
     fontFamily: "Poppins",
@@ -45,7 +44,6 @@ const useStyles = makeStyles({
 
 const Works = () => {
   const classes = useStyles();
-  const [showAll, setShowAll] = React.useState(false);
   return (
     <div className={classes.root} id="work">
       <h2 className={classes.heading}>My Works</h2>

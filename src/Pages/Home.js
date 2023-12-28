@@ -107,8 +107,8 @@ const useStyles = makeStyles({
   hisvg: {
     maxHeight: 60,
     maxWidth: 140,
-
     overflow: "hidden",
+    alignSelf: "flex-start",
   },
   intro: {
     fontFamily: "Poppins",
@@ -140,7 +140,7 @@ const useStyles = makeStyles({
     cursor: "pointer",
     height: 60,
     marginTop: 0,
-    padding: 30,
+    padding: 5,
     transition: "all 0.2s ease",
     "&:hover": {
       marginTop: 20,
@@ -175,7 +175,7 @@ const Home = ({ handlePageChange }) => {
 
   const smoothScrollDown = () => handlePageChange(1);
 
-  const contactMe = () => handlePageChange(8);
+  const contactMe = () => handlePageChange(9);
 
   const TypingAnimation = React.memo(() => {
     return (
@@ -201,7 +201,7 @@ const Home = ({ handlePageChange }) => {
     <div className={classes.root} id="home">
       <div className={classes.navigations}>
         <div className={classes.logoImage}>
-          <img src={Logo} className={classes.mLogoImg} />
+          <img src={Logo} className={classes.mLogoImg} alt={"logo"} />
         </div>
         <div className={classes.menus}>
           <div className={classes.highLighted}>
@@ -231,14 +231,15 @@ const Home = ({ handlePageChange }) => {
             className={classes.hiremeButton}
             onClick={() => contactMe()}
           >
-            Hire Me!
+            Contact Me!
           </Button>
         </div>
       </div>
 
       <div className={classes.bodyDIV}>
         <div className={classes.myname}>
-          <img src={HiSVG} className={classes.hisvg}></img>
+          <img src={HiSVG} className={classes.hisvg} alt={"hi_image"}></img>
+
           <h1 className={classes.myNameWr}>
             <span className={classes.Latter}>S</span>
             <span className={classes.Latter}>h</span>
@@ -295,7 +296,11 @@ const Home = ({ handlePageChange }) => {
         </div>
 
         <div className={classes.homeImage}>
-          <img className={classes.imageCompter} src={ComputerSVG} />
+          <img
+            className={classes.imageCompter}
+            src={ComputerSVG}
+            alt={"computer"}
+          />
         </div>
       </div>
 
@@ -304,6 +309,7 @@ const Home = ({ handlePageChange }) => {
           src={DownSVG}
           className={classes.downLogoSVG}
           onClick={() => smoothScrollDown()}
+          alt={"down_logo"}
         />
       </div>
     </div>

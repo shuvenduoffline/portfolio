@@ -51,7 +51,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    paddingTop: 20,
   },
   container: {
     margin: "0px 120px 0px 120px",
@@ -70,6 +69,7 @@ const useStyles = makeStyles({
     flex: 1.7,
     textAlign: "left",
     marginLeft: 20,
+    width: 400,
     height: 500,
   },
   contactMe: {
@@ -160,7 +160,7 @@ const useStyles = makeStyles({
   inputElementBox: {
     color: "white",
     fontFamily: "Poppins",
-    width: "68ch",
+    width: "51ch",
     height: "10ch",
   },
   inputRowBox: {
@@ -180,7 +180,7 @@ const useStyles = makeStyles({
     color: "white",
     fontFamily: "Poppins",
     position: "absolute",
-    marginTop: "40%",
+    marginTop: "48%",
   },
   backToTop: {
     position: "absolute",
@@ -238,8 +238,6 @@ const Contact = ({ handlePageChange }) => {
   const isNameValid = name && isNaN(name) && name.length >= 2;
 
   const sendMessage = (email, phone, name, subject, message) => {
-    console.log(email, phone, name, subject, message);
-
     var templateParams = {
       from_name: name,
       to_name: subject + phone,
@@ -282,7 +280,7 @@ const Contact = ({ handlePageChange }) => {
 
           <div className={classes.medium} onClick={() => openCall()}>
             <div className={classes.logo}>
-              <img src={Call} />
+              <img src={Call} alt={"call_logo"} />
             </div>
             <div className={classes.details}>
               <p className={classes.passive}>Call Me</p>
@@ -292,7 +290,7 @@ const Contact = ({ handlePageChange }) => {
 
           <div className={classes.medium} onClick={() => openMail()}>
             <div className={classes.logo}>
-              <img src={Email} />
+              <img src={Email} alt={"email"} />
             </div>
             <div className={classes.details}>
               <p className={classes.passive}>Email Me</p>
@@ -302,7 +300,7 @@ const Contact = ({ handlePageChange }) => {
 
           <div className={classes.medium}>
             <div className={classes.logo}>
-              <img src={Location} />
+              <img src={Location} alt={"location"} />
             </div>
             <div className={classes.details}>
               <p className={classes.passive}>Address</p>
@@ -319,21 +317,25 @@ const Contact = ({ handlePageChange }) => {
               src={Medium}
               className={classes.icons}
               onClick={() => openMedium()}
+              alt={"medium"}
             />
             <img
               src={StackOverFlow}
               className={classes.icons}
               onClick={() => openStakOverFlow()}
+              alt={"stack_overflow"}
             />
             <img
               src={LeetCode}
               className={classes.icons}
               onClick={() => openLinkDin()}
+              alt={"leetcode"}
             />
             <img
               src={Github}
               className={classes.icons}
               onClick={() => openGithub()}
+              alt={"github"}
             />
           </div>
         </div>
@@ -451,12 +453,13 @@ const Contact = ({ handlePageChange }) => {
               src={BackToTop}
               className={classes.BTicons}
               onClick={() => handlePageChange(0)}
+              alt={"back_to_top"}
             />
           </div>
         </div>
       </div>
       <p className={classes.copyRight}>
-        Copyright ©2021Offline. All Rights Reserved.
+        Copyright ©2024Offline. All Rights Reserved.
       </p>
     </div>
   );

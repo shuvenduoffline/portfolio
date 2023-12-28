@@ -49,7 +49,7 @@ const Hireme = ({ handlePageChange }) => {
     return () => setFedIn(false);
   }, []);
 
-  const hireMe = () => handlePageChange(8);
+  const hireMe = () => handlePageChange(9);
 
   return (
     <div className={classes.root} id="hireme">
@@ -71,7 +71,7 @@ const Hireme = ({ handlePageChange }) => {
           className={classes.hiremeButton}
           onClick={() => hireMe()}
         >
-          Hire Me!
+          Contact Me!
         </Button>
       </div>
     </div>

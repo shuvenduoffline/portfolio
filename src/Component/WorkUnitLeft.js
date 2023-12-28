@@ -4,7 +4,6 @@ import RightArrowSVG from "../assets/rightarrow.svg";
 
 const useStyles = makeStyles({
   root: {
-    // border: '1px solid red',
     height: "100%",
     backgroundColor: "#000000",
   },
@@ -25,12 +24,15 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   right: {
-    flex: 3,
-    marginLeft: 100,
+    flex: 2,
     justifyContent: "center",
     alignItems: "center",
-    height: "40vh",
-    padding: 50,
+    padding: 20,
+    marginLeft: 100,
+  },
+  left: {
+    flex: 2,
+    marginRight: 100,
   },
   description: {
     fontFamily: "Poppins",
@@ -39,11 +41,9 @@ const useStyles = makeStyles({
     fontWeight: 600,
   },
   showCase: {
-    flex: 3,
-    marginRight: 100,
+    flex: 4,
     height: "60vh",
     borderRadius: 8,
-    maxWidth: 750,
     transition: "all 0.3s ease",
     "&:hover": {
       "box-shadow":
@@ -51,6 +51,8 @@ const useStyles = makeStyles({
       scale: 1.01,
       cursor: "pointer",
     },
+    maxWidth: 650,
+    marginLeft: 100,
   },
   projectName: {
     fontFamily: "Poppins",
@@ -95,14 +97,17 @@ const WorkUnitLeft = ({ ImgSVG, project, technology, details, link = "" }) => {
           src={RightArrowSVG}
           className={classes.rightArrow}
           onClick={() => openLink(link)}
+          alt={"right_arrow_svg"}
         />
       </div>
-
-      <img
-        src={ImgSVG}
-        className={classes.showCase}
-        onClick={() => openLink(link)}
-      />
+      <div className={classes.left}>
+        <img
+          src={ImgSVG}
+          className={classes.showCase}
+          onClick={() => openLink(link)}
+          alt={"show_case_logo"}
+        />
+      </div>
     </div>
   );
 };
